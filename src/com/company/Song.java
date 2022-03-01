@@ -4,14 +4,14 @@ public class Song implements Comparable<Song> {
 
     String title;
     String artist;
-    String rating;
-    String bpm;
+    String length;
+    String filename;
 
-    public Song(String t, String a, String r, String b) {
+    public Song(String t, String a, String l, String fn) {
         title = t;
         artist = a;
-        rating = r;
-        bpm = b;
+        length = l;
+        filename = fn;
     }
 
     public boolean equals(Object aSong) {
@@ -31,12 +31,12 @@ public class Song implements Comparable<Song> {
         return artist;
     }
 
-    public String getBpm() {
-        return bpm;
+    public String getFileName() {
+        return filename;
     }
 
-    public String getRating() {
-        return rating;
+    public String getLen() {
+        return length;
     }
 
     public String getTitle() {
