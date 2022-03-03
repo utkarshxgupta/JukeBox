@@ -99,6 +99,7 @@ public class Main
 
                 case 6:
                     songList.remove(ind);
+                    playa.StopSong();
                     if (ind == songList.size() - 1)
                         ind--;
                     break;
@@ -133,7 +134,10 @@ public class Main
                 case 9:
                     System.out.println("Title: " + songList.get(ind).getTitle());
                     System.out.println("Artist: " + songList.get(ind).getArtist());
-                    System.out.println("BPM: " + songList.get(ind).getLen());
+                    int sec = Integer.parseInt(songList.get(ind).getLen());
+                    int min = sec/60;
+                    sec = sec%60;
+                    System.out.println("Duration: " + min +":"+sec);
                     System.out.println("Enter 1 to go back");
                     int k = 0;
                     flag = 0;
