@@ -111,7 +111,7 @@ public class Main
                     System.out.print("Artist Name: ");
                     String artist = br.readLine();
                     System.out.println();
-                    System.out.print("Song Duration: ");
+                    System.out.print("Song Duration (in seconds): ");
                     String dur = br.readLine();
                     System.out.println();
                     System.out.print("File Name: ");
@@ -125,7 +125,8 @@ public class Main
                     Collections.shuffle(songList);
                     WriteFile();
                     ind = 0;
-                    playa.StopSong();
+                    if (playing)
+                        playa.StopSong();
                     playa = new MusicPlayer("src\\mp3\\" + songList.get(ind).getFileName());
                     playa.PlaySong();
                     playing = true;
